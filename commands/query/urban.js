@@ -19,6 +19,7 @@ module.exports = {
 
     const embed = new MessageEmbed()
       .setTitle(`📗 ${answer.word}`)
+      .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
       .setURL(answer.permalink)
       .addFields(
         { name: '📖 Definition', value: trim(answer.definition, 1024) },

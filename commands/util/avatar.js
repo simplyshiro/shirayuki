@@ -8,7 +8,7 @@ module.exports = {
     const mention = message.mentions.users.first() || message.author;
     const embed = new MessageEmbed()
       .setTitle(`👤 ${mention.username}'s avatar`)
-      .setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true }))
+      .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
       .setImage(mention.displayAvatarURL({ dynamic: true, size: 512 }));
 
     message.channel.send(embed);
